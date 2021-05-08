@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "build": "nuxt build --modern=server",
+    "build:legacy": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "analyze": "yarn build --analyze",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:js:fix": "yarn lint:js --fix",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
+    "lint:style:fix": "yarn lint:style --fix",
     "lint": "yarn lint:js && yarn lint:style",
-    "test": "jest",
+    "test:unit": "jest --runTestsByPath=test/unit/**/*.spec.js",
+    "test:unit:watch": "yarn test:unit --watchAll",
+    "test:unit:cover": "yarn test:unit --collect-coverage",
     "prepare": "husky install"
   },
   "lint-staged": {
