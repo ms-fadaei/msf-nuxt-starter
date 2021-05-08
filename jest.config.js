@@ -1,7 +1,10 @@
 module.exports = {
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '^~/(.*)$': '<rootDir>/$1',
+    '^~.*(svg\\?inline)$': '<rootDir>/test/unit/__stubs__/SvgStub.vue',
+    '^@@/(.*)$': '<rootDir>/$1',
+    '^~~/(.*)$': '<rootDir>/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^~/(.*)$': '<rootDir>/src/$1',
     '^vue$': 'vue/dist/vue.common.js'
   },
   moduleFileExtensions: ['js', 'vue', 'json'],
@@ -9,9 +12,10 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
-  collectCoverage: true,
-  collectCoverageFrom: [
-    '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue'
-  ]
+  coverageDirectory: '<rootDir>/report/coverage/unit',
+  coverageReporters: ['html', 'text']
+  // collectCoverageFrom: [
+  //   '<rootDir>/src/components/**/*.vue',
+  //   '<rootDir>/src/pages/**/*.vue'
+  // ]
 }
