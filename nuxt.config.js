@@ -18,7 +18,37 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    // For global components (Like input, button, ...)
+    {
+      path: '~/components/global',
+      pathPrefix: false
+    },
+
+    // for layout component that just includes slots and style (functional components)
+    {
+      path: '~/components/layout',
+      pathPrefix: false
+    },
+
+    // for other components that private to the specific page/view
+    {
+      path: '~/components/private',
+      pathPrefix: false
+    },
+
+    // For shared components specific to the project (Like lists, shared items, ...)
+    {
+      path: '~/components/shared',
+      pathPrefix: false
+    },
+
+    // For template components that import once per page
+    {
+      path: '~/components/template',
+      pathPrefix: false
+    }
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
