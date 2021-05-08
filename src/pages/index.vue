@@ -21,12 +21,21 @@
           GitHub
         </a>
       </div>
+      <BaseInput class="mt-8" :value.sync="input">
+        <div>Text Entered: {{ input }}</div>
+      </BaseInput>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      input: ''
+    }
+  }
+}
 </script>
 
 <style>
