@@ -5,7 +5,7 @@
       :id="id"
       :value="value"
       type="text"
-      class="base-input__input rounded bg-gray-100 border-2 border-gray-500"
+      class="base-input__input bg-gray-100 border-2 border-gray-500"
       @input="syncValue"
     />
     <slot />
@@ -42,3 +42,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.base-input__input {
+  @apply rounded;
+
+  &:hover {
+    @apply rounded-md bg-gray-400;
+  }
+}
+</style>
