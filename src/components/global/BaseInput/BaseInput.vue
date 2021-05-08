@@ -1,11 +1,14 @@
 <template>
-  <div class="base-input">
-    <label :for="id" class="base-input__label"></label>
+  <div :class="[`base-input${layoutPrefix}`]">
+    <label
+      :for="componentId"
+      :class="[`base-input__label${layoutPrefix}`]"
+    ></label>
     <input
-      :id="id"
+      :id="componentId"
       :value="value"
       type="text"
-      class="base-input__input bg-gray-100 border-2 border-gray-500"
+      :class="[`base-input__input${layoutPrefix}`]"
       @input="syncValue"
     />
     <slot />
@@ -13,8 +16,12 @@
 </template>
 
 <script>
+import layout from '@/mixins/layout'
+import id from '@/mixins/id'
+
 export default {
   name: 'BaseInput',
+  mixins: [layout, id],
   props: {
     value: {
       type: String,
@@ -27,14 +34,6 @@ export default {
     }
   },
   emits: ['update:value'],
-  data() {
-    return {
-      id: null
-    }
-  },
-  beforeMount() {
-    this.id = 'base-input-' + this._uid
-  },
   methods: {
     syncValue(e) {
       this.$emit('update:value', e.target.value)
@@ -45,10 +44,10 @@ export default {
 
 <style lang="scss" scoped>
 .base-input__input {
-  @apply rounded;
+  @apply w-full rounded bg-gray-100 border-2 border-gray-500 p-1;
 
-  &:hover {
-    @apply rounded-md bg-gray-400;
+  &.--dark {
+    @apply bg-gray-800 text-white;
   }
 }
 </style>

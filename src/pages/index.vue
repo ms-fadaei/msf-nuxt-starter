@@ -2,28 +2,9 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">msf-nuxt-app</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-      <BaseInput class="mt-8" :value.sync="input">
-        <div>Text Entered: {{ input }}</div>
-      </BaseInput>
+      <h1 class="title">{{ input }}</h1>
+      <BaseInput class="mt-5 w-100" :value.sync="input" />
+      <BaseInput class="mt-4 w-100" theme="dark" :value.sync="input" />
     </div>
   </div>
 </template>
@@ -32,7 +13,7 @@
 export default {
   data() {
     return {
-      input: ''
+      input: 'msf-nuxt-app'
     }
   }
 }
@@ -45,30 +26,30 @@ export default {
 }
 */
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
   text-align: center;
 }
 
 .title {
+  display: block;
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
   font-size: 100px;
+  font-weight: 300;
   color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
-  font-weight: 300;
+  padding-bottom: 15px;
   font-size: 42px;
+  font-weight: 300;
   color: #526488;
   word-spacing: 5px;
-  padding-bottom: 15px;
 }
 
 .links {
