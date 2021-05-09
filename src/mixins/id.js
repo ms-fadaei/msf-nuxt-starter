@@ -1,11 +1,17 @@
 export default {
   data() {
     return {
-      componentId: null
+      __id: null
     }
   },
   beforeMount() {
-    const componentName = this._name.replace(/[<>]/g, '').toLowerCase()
-    this.componentId = componentName + '-' + this._uid
+    this.$nextTick(() => {
+      const componentName = this._name
+        .replace(/[<>]/g, '')
+        .replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`)
+        .replace(/^-/, '')
+
+      this.$data.__id = `${componentName}-${this._uid}`
+    })
   }
 }

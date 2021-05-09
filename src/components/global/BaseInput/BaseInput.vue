@@ -1,11 +1,10 @@
 <template>
   <div :class="[`base-input${layoutPrefix}`]">
-    <label
-      :for="componentId"
-      :class="[`base-input__label${layoutPrefix}`]"
-    ></label>
+    <label :for="$data.__id" :class="[`base-input__label${layoutPrefix}`]"
+      >عنولن</label
+    >
     <input
-      :id="componentId"
+      :id="$data.__id"
       :value="value"
       type="text"
       :class="[`base-input__input${layoutPrefix}`]"
