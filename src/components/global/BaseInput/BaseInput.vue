@@ -1,8 +1,8 @@
 <template>
   <div :class="[`base-input${layoutPrefix}`]">
-    <label :for="$data.__id" :class="[`base-input__label${layoutPrefix}`]"
-      >عنولن</label
-    >
+    <label :for="$data.__id" :class="[`base-input__label${layoutPrefix}`]">{{
+      label
+    }}</label>
     <input
       :id="$data.__id"
       :value="value"
