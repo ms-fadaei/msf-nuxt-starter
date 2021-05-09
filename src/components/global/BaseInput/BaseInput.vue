@@ -1,13 +1,13 @@
 <template>
-  <div :class="[`base-input${layoutPrefix}`]">
-    <label :for="$data.__id" :class="[`base-input__label${layoutPrefix}`]">{{
+  <div :class="[`base-input${m__layoutClassName}`]">
+    <label :for="m__id" :class="[`base-input__label${m__layoutClassName}`]">{{
       label
     }}</label>
     <input
-      :id="$data.__id"
+      :id="m__id"
       :value="value"
       type="text"
-      :class="[`base-input__input${layoutPrefix}`]"
+      :class="[`base-input__input${m__layoutClassName}`]"
       @input="syncValue"
     />
     <slot />
@@ -45,7 +45,7 @@ export default {
 .base-input__input {
   @apply w-full rounded bg-gray-100 border-2 border-gray-500 p-1;
 
-  &.--dark {
+  &.--theme-dark {
     @apply bg-gray-800 text-white;
   }
 }

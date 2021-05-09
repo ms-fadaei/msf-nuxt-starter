@@ -12,11 +12,11 @@ export default {
     }
   },
   computed: {
-    layoutPrefix() {
+    m__layoutClassName() {
       const layout = this.layout
       const theme = this.theme
 
-      return (layout ? `-${layout} ` : '') + (theme ? ` --${theme}` : '')
+      return (layout ? `-${layout} ` : '') + (theme ? ` --theme-${theme}` : '')
     }
   }
 }
