@@ -10,12 +10,17 @@ module.exports = {
   extends: [
     '@nuxtjs',
     'plugin:prettier/recommended',
-    'plugin:nuxt/recommended',
-    'standard'
+    'plugin:nuxt/recommended'
   ],
   plugins: [],
-  // add your custom rules here
   rules: {
-    'space-before-function-paren': 0
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ]
   }
 }
