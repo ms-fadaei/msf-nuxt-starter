@@ -25,27 +25,9 @@ export default {
       pathPrefix: false
     },
 
-    // for layout component that just includes slots and style (functional components)
-    {
-      path: '~/components/layout',
-      pathPrefix: false
-    },
-
-    // for other components that private to the specific page/view
-    {
-      path: '~/components/private',
-      pathPrefix: false
-    },
-
     // For shared components specific to the project (Like lists, shared items, ...)
     {
       path: '~/components/shared',
-      pathPrefix: false
-    },
-
-    // For template components that import once per page
-    {
-      path: '~/components/template',
       pathPrefix: false
     }
   ],
