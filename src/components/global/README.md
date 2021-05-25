@@ -13,7 +13,7 @@ There are some points about components in this directory:
 
 **Directory Structure**
 ```
-|--/Global
+|--/global
 |----/BaseButton
 |------BaseButton.vue
 |------BaseButton.spec.js
