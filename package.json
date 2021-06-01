@@ -53,7 +53,7 @@
     "postcss": "8.2.15",
     "prettier": "2.3.0",
     "sass": "1.32.13",
-    "sass-loader": "10",
+    "sass-loader": "12",
     "standard-version": "9.3.0",
     "stylelint": "13.13.1",
     "stylelint-config-prettier": "8.0.2",
