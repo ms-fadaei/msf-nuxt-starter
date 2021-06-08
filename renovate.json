@@ -1,5 +1,11 @@
 {
   "extends": [
     "@nuxtjs"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["jest"],
+      "excludePackageNames": ["sass"]
+    }
   ]
 }
