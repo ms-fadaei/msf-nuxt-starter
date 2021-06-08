@@ -7,7 +7,7 @@ This directory contains the Global Components. These components can be used in o
 There are some points about components in this directory:
 1. Their names must start with `Base` prefix (Like BaseButton).
 2. They must be independent of the project. All assets (like icons, ...), logic, test, etc must be located in one directory with a relative path.
-3. associated files/assets (that mentioned above) must group in a sub directory with the name of component (kebab-case).
+3. associated files/assets (that mentioned above) must group in a sub directory with the name of the component (kebab-case).
 4. They must have the general logic and UI styles to be reused in another project without any complexities.
 5. They are global components so we don't need to import them inside other components.
 
