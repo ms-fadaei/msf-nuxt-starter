@@ -2,9 +2,5 @@
   "extends": [
     "@nuxtjs"
   ],
-  "packageRules": [
-    {
-      "ignoreDeps": ["sass", "jest", "babel-jest"]
-    }
-  ]
+  "ignoreDeps": ["sass", "jest", "babel-jest"]
 }
