@@ -4,8 +4,7 @@
   ],
   "packageRules": [
     {
-      "excludePackagePatterns": ["jest"],
-      "excludePackageNames": ["sass"]
+      "ignoreDeps": ["sass", "jest", "babel-jest"]
     }
   ]
 }
