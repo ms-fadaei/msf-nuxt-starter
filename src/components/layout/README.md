@@ -1,5 +1,14 @@
-# PRIVATE COMPONENTS
+# LAYOUT COMPONENTS
 
-**This directory is not required, you can delete it if you don't want to use it.**
+> ⚠ **This directory is not required, you can delete it if you don't want to use it.**
 
-The layout directory contains your Layout Components. These components just have slots and styles.
+This directory contains the Layout Components. These components only used for layouts (This pattern increases page/component readability).
+
+**Directory Structure**
+```
+|--/layout
+|----FooterLayout.vue
+|----NormalSection.vue
+|----WideSection.vue
+|----...
+```
