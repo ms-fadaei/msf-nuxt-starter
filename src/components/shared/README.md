@@ -12,7 +12,7 @@ There are some points about components in this directory:
 
 **Directory Structure**
 ```
-|--/Shared
+|--/shared
 |----/comment-box
 |------CommentBox.vue
 |------CommentBoxScore.vue
